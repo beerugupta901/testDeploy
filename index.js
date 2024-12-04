@@ -1,0 +1,14 @@
+const express = require('express')
+const app = express()
+const port = 3000
+require('dotenv').config()  //.env file ko import karna
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+app.get('/moj',(req,res)=>{
+    res.send("<h1>moj karo!!</h1>")
+})
+app.listen(process.env.PORT, () => {
+  console.log(`Example app listening on port ${port}`)
+})
